@@ -128,35 +128,30 @@
                 // prevent error if no options object was passed
                 var options = options || {};
 
+                var DEFAULT_OPTIONS = {
+                    title: 'Untitled Window',
+                    width: 400,
+                    height: 200,
+                    x: 0,
+                    y: 0,
+                    minWidth: 200,
+                    maxWidth: Infinity,
+                    minHeight: 100,
+                    maxHeight: Infinity,
+                    resizable: true,
+                    appendTo: element.parent(),
+
+                    onOpen: null,
+                    onClose: function () { return true; },
+                    onResize: null,
+                    onActivate: null,
+                    onDeactivate: null,
+                    onDragstart: null,
+                    onDragend: null
+                };
+
                 var Window = function (options) {
-
-                    this.options = {
-                        title: options.title || 'Untitled Window',
-                        width: options.width || 400,
-                        height: options.height || 200,
-                        x: options.x || 0,
-                        y: options.y || 0,
-                        minWidth: options.minWidth || 200,
-                        maxWidth: options.maxWidth || Infinity,
-                        minHeight: options.minHeight || 100,
-                        maxHeight: options.maxHeight || Infinity,
-                        resizable: options.resizable || true,
-                        appendTo: options.appendTo || element.parent(),
-
-
-                        onOpen: options.onOpen || null,
-                        onClose: options.onClose || function() {
-                            return true;
-                        },
-                        onResize: options.onResize || function() {
-                            if (options.onResize) { options.onResize() }
-                        },
-                        onActivate: options.onActivate || null,
-                        onDeactivate: options.onDeactivate || null,
-                        onDragstart: options.onDragstart ||null,
-                        onDragend: options.onDragend || null
-                    };
-
+                    this.options = angular.extend({}, DEFAULT_OPTIONS, options);
 
                     // Get references to window elements
                     this.w = angular.element($window);
