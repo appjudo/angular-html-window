@@ -1,7 +1,7 @@
 {
   "name": "angular-html-window",
   "version": "1.0.7",
-  "description": "Provides native angular windows",
+  "description": "Provides draggable, resizable windows in Angular 1.x",
   "repository": {
     "type": "git",
     "url": "git://github.com/acjim/angular-html-window.git"
@@ -9,7 +9,7 @@
   "author": "https://github.com/acjim/angular-html-window/contributors",
   "license": "MIT",
   "bugs": "https://github.com/acjim/angular-html-window/issues",
-  "main": "index.js",
+  "main": "src/ngHtmlWindow.js",
   "dependencies": {},
   "devDependencies": {
     "angular": "^1.4.7"
