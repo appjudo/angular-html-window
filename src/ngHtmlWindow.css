@@ -137,7 +137,10 @@
 
 /***** Fonts *****/
 
-a, a:hover, a:active, a:visited {
+.ng-window-titlebar a,
+.ng-window-titlebar a:hover,
+.ng-window-titlebar a:active,
+.ng-window-titlebar a:visited {
     text-decoration:none;
     color: inherit;
 }
