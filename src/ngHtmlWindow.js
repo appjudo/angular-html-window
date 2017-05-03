@@ -97,7 +97,7 @@
                    + "        <\/div>"
                    + "    <\/div>"
                    + "    <div class=\"ng-window-content\">"
-                   + "        <div ng-transclude=\"true\"><\/div>"
+                   + "        <div ng-transclude><\/div>"
                    + "    <\/div>"
                    + "    <div class=\"ng-window-resize ng-window-resize-n\"><\/div>"
                    + "    <div class=\"ng-window-resize ng-window-resize-e\"><\/div>"
